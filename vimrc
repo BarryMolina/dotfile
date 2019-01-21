@@ -17,5 +17,3 @@ nnoremap <CR> :noh<CR><CR>
 "syntax highlighting
 filetype plugin indent on
 syntax on
-
-set number
