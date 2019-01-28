@@ -24,3 +24,12 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 # improve ls
 alias ls='ls -Gh'
+# TAB through completions
+
+# edit this file
+alias bp="vim ~/dotfile/bash_profile"
+
+# SSH
+alias router="ssh barry@router.home"
+alias home="ssh barry@homeassistant.home"
+
