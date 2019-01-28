@@ -1,2 +1,8 @@
 alias la="ls -a"
-
+alias va="vim ~/.dotfiles/system/alias"
+# git
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gps="git push"
+alias gpl="git pull"
