@@ -1,0 +1,5 @@
+for DOTFILE in `find /Users/barrymolina/.dotfiles/system`
+do
+  [ -f "$DOTFILE" ] && source "$DOTFILE"
+done
+
