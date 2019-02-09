@@ -1,6 +1,7 @@
 alias la="ls -a"
 alias ll="ls -l"
 alias va="vim ~/.dotfiles/system/alias"
+alias dot="cd ~/.dotfiles"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
