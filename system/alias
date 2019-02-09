@@ -8,8 +8,8 @@ alias ....="cd ../../.."
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
-alias gps="git push"
-alias gpl="git pull"
+alias gpsh="git push"
+alias gpul="git pull"
 # venvs
 alias gold="source ~/.venvs/goldrocks/bin/activate"
 # cd shortcuts
