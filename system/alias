@@ -1,8 +1,16 @@
 alias la="ls -a"
+alias ll="ls -l"
 alias va="vim ~/.dotfiles/system/alias"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 # git
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
 alias gps="git push"
 alias gpl="git pull"
+# venvs
+alias gold="source ~/.venvs/goldrocks/bin/activate"
+# cd shortcuts
+alias polls="cd ~/Projects/pollsite"
