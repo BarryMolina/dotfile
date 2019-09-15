@@ -5,13 +5,27 @@ alias dot="cd ~/.dotfiles"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+
 # git
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
 alias gpsh="git push"
 alias gpul="git pull"
+
 # venvs
 alias gold="source ~/.venvs/goldrocks/bin/activate"
+alias esp="source /Users/barrymolina/.venvs/esptool/bin/activate"
+
 # cd shortcuts
 alias polls="cd ~/Projects/pollsite"
+alias 110="cd ~/MATC/FA2019/ITDEV-110"
+
+# command wrappers
+alias ch="chmod 755"
+
+# scripts
+alias bs="vimbashscr.sh"
+alias gres="gres.sh"
+alias htm="mkhtml.sh"
+alias mj="mkjava.sh"
