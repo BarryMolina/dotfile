@@ -1,20 +1,108 @@
-"set escape to jk
-inoremap jk <ESC>
+" for Vundle
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()
+filetype plugin indent on
 
 "indentation
 set history=200 
 set shiftwidth=4 softtabstop=4 expandtab 
 set autoindent 
 set smartindent 
+set shiftround
 
 "search options
 set smartcase
 set incsearch
 set hlsearch
-"allow return to clear search highlighting
-nnoremap <CR> :noh<CR><CR>
 
 "syntax highlighting
 filetype plugin indent on
 syntax on
 colorscheme elflord
+
+"relative line numbers
+set number
+set relativenumber
+set numberwidth=4
+
+"show matching bracket
+set showmatch
+
+"set leader
+let mapleader = ","
+
+"set localleader
+let maplocalleader = "\\"
+
+"NORMAL MODE REMAPS
+"add quotes
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+vnoremap <leader>" <esc>a"<esc>`<i"<esc>`>2l
+vnoremap <leader>' <esc>a'<esc>`<i'<esc>`>2l
+
+"move to beginning, end of line
+nnoremap H ^
+nnoremap L $
+
+"remap original H, L
+nnoremap <leader>H H
+nnoremap <leader>L L
+
+"remap , function
+nnoremap <leader>, ,
+
+"allow return to clear search highlighting
+nnoremap <CR> :noh<CR><CR>
+
+"new blank line under current line
+nnoremap <leader>n o<esc>
+
+"new blank line above current line
+nnoremap <leader>N O<esc>
+
+"open vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+"source vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"source gvimrc
+nnoremap <leader>sg :source $MYVIMRC<cr>:source $MYGVIMRC<cr>:source $MYGVIMRC<cr>
+
+"move line down
+nnoremap <leader>- ddp
+
+"move line up (doesn't work for last line of file)
+nnoremap <leader>_ ddkP
+
+"big word to upper
+nnoremap <leader><c-u> viwU
+
+"INSERT MODE REMAPS
+"set escape to jk
+inoremap jk <ESC>
+
+"big word to upper (adds weird space)
+inoremap <leader><c-u> <esc>viWUEa 
+
+"ABBREVIATIONS 
+"typos
+iabbrev waht what
+iabbrev tehn then
+iabbrev hellow hello
+
+"info
+iabbrev bm Barry Molina
+iabbrev baz bazzboy@gmail.com
+
+"java
+iabbrev sout System.out.println
+iabbrev func public void functionName() {<cr>}<esc>ko
