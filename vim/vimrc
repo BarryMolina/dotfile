@@ -90,6 +90,9 @@ nnoremap <leader><c-u> viwU
 "set escape to jk
 inoremap jk <ESC>
 
+" add matching curly bracket
+iabbrev { {<esc>o}<esc>kA
+
 "big word to upper (adds weird space)
 inoremap <leader><c-u> <esc>viWUEa 
 
