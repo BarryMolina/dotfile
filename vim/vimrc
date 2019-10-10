@@ -33,7 +33,7 @@ set relativenumber
 set numberwidth=4
 
 "show matching bracket
-set showmatch
+"set showmatch
 
 "set leader
 let mapleader = ","
@@ -86,6 +86,9 @@ nnoremap <leader>_ ddkP
 "big word to upper
 nnoremap <leader><c-u> viwU
 
+" insert at correct tab position
+nnoremap <leader>i ko
+
 "INSERT MODE REMAPS
 "set escape to jk
 inoremap jk <ESC>
@@ -95,6 +98,7 @@ iabbrev { {<esc>o}<esc>kA
 
 "big word to upper (adds weird space)
 inoremap <leader><c-u> <esc>viWUEa 
+
 
 "ABBREVIATIONS 
 "typos
@@ -107,5 +111,5 @@ iabbrev bm Barry Molina
 iabbrev baz bazzboy@gmail.com
 
 "java
-iabbrev sout System.out.println
+iabbrev sout System.out.println("");<esc>^ci"
 iabbrev func public void functionName() {<cr>}<esc>ko
