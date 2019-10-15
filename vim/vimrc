@@ -100,6 +100,8 @@ inoremap <leader><c-u> <esc>viWUEa
 
 
 "ABBREVIATIONS 
+iabbrev { {<esc>o}<esc>kA
+
 "typos
 iabbrev waht what
 iabbrev tehn then
@@ -110,29 +112,36 @@ iabbrev bm Barry Molina
 iabbrev baz bazzboy@gmail.com
 
 "java
+augroup FileType_java
     autocmd filetype java iabbrev <buffer> print system.out.println("");<left><left><left>
-    autocmd filetype java iabbrev <buffer> { {<esc>o}<esc>kA
     autocmd filetype java iabbrev <buffer> func public void functionName() {<cr>}<esc>ko
+    autocmd FileType java setlocal norelativenumber
+    autocmd FileType java setlocal nowrap
+    autocmd FileType java nnoremap <buffer> <localleader>c I// <esc>
+    autocmd FileType java vnoremap <buffer> <localleader>c I// <esc>
+augroup END
 
 "AUTOCOMMANDS 
-autocmd FileType html setlocal nowrap
-autocmd FileType html setlocal spell
-autocmd FileType html vnoremap <buffer> <localleader>c <esc>`<I<!-- <esc>`>A --><esc>
-autocmd FileType html vnoremap <buffer> <localleader>dc <esc>`<^daw`>daw
-autocmd FileType html iabbrev <buffer> <localleader>l" &ldquo;
-autocmd FileType html iabbrev <buffer> <localleader>r" &rdquo;
+augroup filetype_html
+    autocmd FileType html setlocal nowrap
+    autocmd FileType html setlocal spell
+    autocmd FileType html vnoremap <buffer> <localleader>c <esc>`<I<!-- <esc>`>A --><esc>
+    autocmd FileType html vnoremap <buffer> <localleader>dc <esc>`<^daw`>daw
+    autocmd FileType html iabbrev <buffer> <localleader>l" &ldquo;
+    autocmd FileType html iabbrev <buffer> <localleader>r" &rdquo;
+augroup END
 
-autocmd FileType css vnoremap <buffer> <localleader>c <esc>`<I/* <esc>`>A */<esc>
-autocmd FileType css vnoremap <buffer> <localleader>dc <esc>`<^daw`>daw
-autocmd filetype css iabbrev <buffer> { {<esc>o}<esc>kA
+augroup FileType
+    autocmd FileType css vnoremap <buffer> <localleader>c <esc>`<I/* <esc>`>A */<esc>
+    autocmd FileType css vnoremap <buffer> <localleader>dc <esc>`<^daw`>daw
+augroup END
 
-autocmd FileType python nnoremap <buffer> <localleader>c I# <esc>
-autocmd FileType python vnoremap <buffer> <localleader>c I# <esc>
+augroup FileType_python
+    autocmd FileType python nnoremap <buffer> <localleader>c I# <esc>
+    autocmd FileType python vnoremap <buffer> <localleader>c I# <esc>
+augroup END
 
-autocmd FileType java setlocal norelativenumber
-autocmd FileType java setlocal nowrap
-autocmd FileType java nnoremap <buffer> <localleader>c I// <esc>
-autocmd FileType java vnoremap <buffer> <localleader>c I// <esc>
-
-autocmd FileType vim nnoremap <buffer> <localleader>c I"<esc>
-autocmd FileType vim vnoremap <buffer> <localleader>c I"<esc>
+augroup FileType_vim
+    autocmd FileType vim nnoremap <buffer> <localleader>c I"<esc>
+    autocmd FileType vim vnoremap <buffer> <localleader>c I"<esc>
+augroup END
