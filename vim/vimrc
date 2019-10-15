@@ -113,6 +113,7 @@ iabbrev baz bazzboy@gmail.com
 
 "java
 augroup FileType_java
+    autocmd!
     autocmd filetype java iabbrev <buffer> print system.out.println("");<left><left><left>
     autocmd filetype java iabbrev <buffer> func public void functionName() {<cr>}<esc>ko
     autocmd FileType java setlocal norelativenumber
@@ -123,6 +124,7 @@ augroup END
 
 "AUTOCOMMANDS 
 augroup filetype_html
+    autocmd!
     autocmd FileType html setlocal nowrap
     autocmd FileType html setlocal spell
     autocmd FileType html vnoremap <buffer> <localleader>c <esc>`<I<!-- <esc>`>A --><esc>
@@ -132,16 +134,19 @@ augroup filetype_html
 augroup END
 
 augroup FileType
+    autocmd!
     autocmd FileType css vnoremap <buffer> <localleader>c <esc>`<I/* <esc>`>A */<esc>
     autocmd FileType css vnoremap <buffer> <localleader>dc <esc>`<^daw`>daw
 augroup END
 
 augroup FileType_python
+    autocmd!
     autocmd FileType python nnoremap <buffer> <localleader>c I# <esc>
     autocmd FileType python vnoremap <buffer> <localleader>c I# <esc>
 augroup END
 
 augroup FileType_vim
+    autocmd!
     autocmd FileType vim nnoremap <buffer> <localleader>c I"<esc>
     autocmd FileType vim vnoremap <buffer> <localleader>c I"<esc>
 augroup END
