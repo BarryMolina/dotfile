@@ -133,7 +133,7 @@ augroup filetype_html
     autocmd FileType html iabbrev <buffer> <localleader>r" &rdquo;
 augroup END
 
-augroup FileType
+augroup FileType_css
     autocmd!
     autocmd FileType css vnoremap <buffer> <localleader>c <esc>`<I/* <esc>`>A */<esc>
     autocmd FileType css vnoremap <buffer> <localleader>dc <esc>`<^daw`>daw
