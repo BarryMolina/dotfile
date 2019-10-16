@@ -9,7 +9,7 @@ alias ....="cd ../../.."
 # git
 alias gs="git status"
 alias ga="git add"
-alias gc="git commit"
+alias gc="~/.scripts/gitcommit.sh"
 alias gpsh="git push"
 alias gpul="git pull"
 
@@ -23,6 +23,7 @@ alias 110="cd ~/MATC/FA2019/ITDEV-110"
 
 # command wrappers
 alias ch="chmod 755"
+alias open="gnome-open"
 
 # scripts
 alias bs="vimbashscr.sh"
