@@ -1,14 +1,14 @@
 " for Vundle
-set nocompatible
-filetype off
+"set nocompatible
+"filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+"Plugin 'VundleVim/Vundle.vim'
 
-call vundle#end()
-filetype plugin indent on
+"call vundle#end()
+"filetype plugin indent on
 
 "indentation
 set history=200 
@@ -69,7 +69,7 @@ nnoremap <leader>n o<esc>
 nnoremap <leader>N O<esc>
 
 "open vimrc
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :split $MYVIMRC<cr>
 
 "source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
@@ -83,7 +83,7 @@ nnoremap <leader>- ddp
 "move line up (doesn't work for last line of file)
 nnoremap <leader>_ ddkP
 
-"big word to upper
+"word to upper
 nnoremap <leader><c-u> viwU
 
 " insert at correct tab position
@@ -95,8 +95,8 @@ inoremap jk <ESC>
 
 " add matching curly bracket
 
-"big word to upper (adds weird space)
-inoremap <leader><c-u> <esc>viWUEa 
+"word to upper (adds weird space)
+inoremap <leader><c-u> <esc>viwUea 
 
 
 "ABBREVIATIONS 
@@ -114,12 +114,16 @@ iabbrev baz bazzboy@gmail.com
 "java
 augroup FileType_java
     autocmd!
-    autocmd filetype java iabbrev <buffer> print system.out.println("");<left><left><left>
+    autocmd filetype java iabbrev <buffer> print System.out.print("");<left><left><left>
+    autocmd filetype java iabbrev <buffer> printf System.out.printf("");<left><left><left>
+    autocmd filetype java iabbrev <buffer> printl System.out.println("");<left><left><left>
     autocmd filetype java iabbrev <buffer> func public void functionName() {<cr>}<esc>ko
+    autocmd filetype java iabbrev <buffer> scan import java.util.Scanner;
+    autocmd filetype java iabbrev <buffer> key Scanner keyboard = new Scanner(System.in);
     autocmd FileType java setlocal norelativenumber
     autocmd FileType java setlocal nowrap
     autocmd FileType java nnoremap <buffer> <localleader>c I// <esc>
-    autocmd FileType java vnoremap <buffer> <localleader>c I// <esc>
+    autocmd FileType java vnoremap <buffer> <localleader>c <esc>`<<C-v>`>I// <esc>
 augroup END
 
 "AUTOCOMMANDS 
