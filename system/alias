@@ -23,7 +23,7 @@ alias 110="cd ~/MATC/FA2019/ITDEV-110"
 
 # command wrappers
 alias ch="chmod 755"
-alias open="gnome-open"
+#alias open="gnome-open"
 
 # scripts
 alias bs="vimbashscr.sh"

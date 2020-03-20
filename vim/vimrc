@@ -29,7 +29,7 @@ colorscheme elflord
 
 "relative line numbers
 set number
-set relativenumber
+"set relativenumber
 set numberwidth=4
 
 "show matching bracket
@@ -92,6 +92,10 @@ nnoremap <leader>i ko
 "INSERT MODE REMAPS
 "set escape to jk
 inoremap jk <ESC>
+"inoremap [ []<Left>
+"inoremap ( ()<Left>
+"inoremap " ""<Left>
+"inoremap ' ''<Left>
 
 " add matching curly bracket
 
@@ -116,7 +120,8 @@ augroup FileType_java
     autocmd!
     autocmd filetype java iabbrev <buffer> print System.out.print("");<left><left><left>
     autocmd filetype java iabbrev <buffer> printf System.out.printf("");<left><left><left>
-    autocmd filetype java iabbrev <buffer> printl System.out.println("");<left><left><left>
+    autocmd filetype java iabbrev <buffer> sout System.out.println("");<left><left><left>
+    autocmd filetype java iabbrev <buffer> fori for (int i = 0; i < arr.length; i++) {<cr>}<esc>kfaciw
     autocmd filetype java iabbrev <buffer> func public void functionName() {<cr>}<esc>ko
     autocmd filetype java iabbrev <buffer> scan import java.util.Scanner;
     autocmd filetype java iabbrev <buffer> key Scanner keyboard = new Scanner(System.in);

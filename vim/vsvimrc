@@ -1,0 +1,23 @@
+"move to beginning, end of line
+nnoremap H ^
+nnoremap L $
+
+"remap original H, L
+nnoremap <leader>H H
+nnoremap <leader>L L
+
+"INSERT MODE REMAPS
+"set escape to jk
+inoremap jk <ESC>
+iabbrev { {<esc>o}<esc>kA
+"indentation
+set history=200 
+set shiftwidth=4 softtabstop=4 expandtab 
+set autoindent 
+set smartindent 
+set shiftround
+
+"search options
+set smartcase
+set incsearch
+set hlsearch
