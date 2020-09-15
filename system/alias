@@ -5,6 +5,7 @@ alias dot="cd ~/.dotfiles"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias py="python3"
 
 # git
 alias gs="git status"
