@@ -74,6 +74,8 @@ plugins=(
     zsh-autosuggestions
     # zsh-vim-mode
     vi-mode
+    z
+    fzf
 )
 
 source $ZSH/oh-my-zsh.sh
