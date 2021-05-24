@@ -9,7 +9,9 @@ Plug 'tpope/vim-repeat'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'luochen1990/rainbow'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-Plug 'bkad/CamelCaseMotion'
+Plug 'bkad/CamelCaseMotion',
+Plug 'pangloss/vim-javascript'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
 "luochen1990/rainbow
@@ -185,11 +187,11 @@ inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 
 "autoclose
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap [ []<Left>
-inoremap ( ()<Left>
-inoremap { {}<left>
+" inoremap " ""<Left>
+" inoremap ' ''<Left>
+" inoremap [ []<Left>
+" inoremap ( ()<Left>
+" inoremap { {}<left>
 inoremap [<CR> [<CR>]<ESC>O
 inoremap (<CR> (<CR>)<ESC>O
 inoremap {<CR> {<CR>}<ESC>O

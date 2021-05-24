@@ -110,8 +110,9 @@ bindkey -M viins 'jk' vi-cmd-mode
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ez="vim ~/.zshrc"
+alias ez="nvim ~/.zshrc"
 alias sz="source ~/.zshrc"
+alias eiv="nvim ~/.ideavimrc"
 
 # Enable vi mode
 #bindkey -v
