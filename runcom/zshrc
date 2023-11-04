@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
  export PATH=$HOME/bin:/usr/local/bin:$PATH
+ # export LD_LIBRARY_PATH=/usr/local/lib
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/barrymolina/.oh-my-zsh"
@@ -27,7 +28,7 @@ ZSH_THEME="avit"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
- DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -113,6 +114,8 @@ bindkey -M viins 'jk' vi-cmd-mode
 alias ez="nvim ~/.zshrc"
 alias sz="source ~/.zshrc"
 alias eiv="nvim ~/.ideavimrc"
+alias m="./manage.py"
+alias mk="make"
 
 # Enable vi mode
 #bindkey -v
@@ -121,3 +124,14 @@ alias eiv="nvim ~/.ideavimrc"
 setopt menu_complete
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# add flutter pub to path
+export PATH=$PATH:$HOME/.pub-cache/bin
+
+# android sdk to path
+export PATH=$PATH:$HOME/Library/Android/sdk/emulator
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+
+# Cargo path
+export PATH=$PATH:$HOME/.cargo/bin
