@@ -73,7 +73,6 @@ plugins=(
     git 
     zsh-syntax-highlighting
     zsh-autosuggestions
-    # zsh-vim-mode
     vi-mode
     z
 )
@@ -116,6 +115,8 @@ alias sz="source ~/.zshrc"
 alias eiv="nvim ~/.ideavimrc"
 alias m="./manage.py"
 alias mk="make"
+# source a virtual environment with the same name as the current directory
+alias sv="source $VENV/${PWD##*/}/bin/activate"
 
 # Enable vi mode
 #bindkey -v
@@ -135,3 +136,17 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 
 # Cargo path
 export PATH=$PATH:$HOME/.cargo/bin
+
+export VENV=$HOME/.venvs
+export DOTFILE=$HOME/.dotfiles
+
+# load all functions in the `functions` folder
+# see https://postgresqlstan.github.io/zsh/zsh-functions-2/#:~:text=The%20method%20zsh%20provides%20for,do%20this%20in%20any%20location.
+typeset -U fpath
+my_functions=$DOTFILE/system/functions
+if [[ -z ${fpath[(r)$my_functions]} ]] ; then
+    fpath=($my_functions $fpath)
+    autoload -Uz ${my_functions}/*(:t)
+fi
+
+

@@ -1,0 +1,11 @@
+# script to create python virtual environment
+# arg1 [optional]: name of virtual environment. Uses current directory name if not passed
+local name=$([ -z "$1" ] && echo "${PWD##*/}" || echo "$1")
+local venv_path=$VENV/$name
+if [ ! -d $venv_path ]; then
+    echo no environment found, creating...
+    # create the venv
+    python3 -m venv "$venv_path"
+else 
+    echo environment exists.
+fi
