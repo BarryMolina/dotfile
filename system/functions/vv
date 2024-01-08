@@ -6,6 +6,7 @@ if [ ! -d $venv_path ]; then
     echo no environment found, creating...
     # create the venv
     python3 -m venv "$venv_path"
+    echo created virtual environment: $venv_path
 else 
-    echo environment exists.
+    echo environment exists: $venv_path
 fi
